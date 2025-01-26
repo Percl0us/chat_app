@@ -62,12 +62,6 @@ export const login = async (req, res) => {
       email: user.email,
       profilePic: user.profilePic,
     });
-    res.user = {
-      _id: user._id,
-      fullName: user.fullName,
-      email: user.email,
-      profilePic: user.profilePic,
-    };
   } catch (error) {
     console.log("Error in login controller", error.message);
     res.status(500).json({ msg: "Internal server error" });
